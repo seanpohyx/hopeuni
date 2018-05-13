@@ -3,19 +3,20 @@
 <head>
 	<title>HopeUNI</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
 </head>
 <body>
-	<div ng-app="hopeUNIapp" ng-controller="hopeUNIctrl">
+	<div id='main' ng-app="hopeUNIapp" ng-controller="hopeUNIctrl">
 
-		<input type = "text" ng-model = "searchName" placeholder="Enter your name">
-		<table border="1">
+		<input id = 'name-filter' type = "text" ng-model = "searchName" placeholder="Enter your name">
+		<table id = "select-user">
 			<tr> <td> {{ heads[0] }} </td> </tr>
 			<tr ng-repeat="username in usernames | filter:filterByQuery(searchName)">
 				<td ng-click="display(username)"> {{ username }} </td>
 			</tr>
 		</table>
 
-		<table border = "1" ng-hide = "selecteduser == null">
+		<table id = "selected-user" ng-hide = "selecteduser == null">
 			<tr ng-repeat="(key, value) in selecteduser">
 				<td>{{ key }}</td><td>{{ value }}</td>
 			</tr>
@@ -33,7 +34,7 @@
 
 				$scope.filterByQuery = (query) => {
 					return (username) => {
-						return query == null || username.includes(query)
+						return query != null && query != "" && username.toUpperCase().includes(query.toUpperCase())
 					}
 				}
 

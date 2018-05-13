@@ -1,0 +1,51 @@
+* {
+	font-family: arial;
+	font-size: 18px;
+}
+
+#main {
+	width: 350px;
+	padding: 20px;
+	margin: 0 auto 0 auto;
+	border: black solid 1px;
+	text-align: center;
+}
+
+input#name-filter {
+	width: 90%;
+	margin: 0;
+	padding: 10px;
+	display:inline-block;
+	text-align: left;
+}
+
+table {
+	text-transform: capitalize;
+	display: inline-block;
+	text-align: left;
+}
+
+table#select-user {
+	margin-top: 20px;
+	width: 100%;
+}
+table#select-user tr:first-of-type td {
+	cursor: default !important;
+}
+
+table#select-user td {
+	border-bottom: black solid 1px;
+	padding-top: 20px;
+	width: 420px;
+	cursor: pointer;
+}
+
+table#selected-user {
+	margin-top: 100px;
+	width: 350px;
+}
+table#selected-user td {
+	border-bottom: black solid 1px;
+	padding-top: 20px;
+	width: 200px;
+}
