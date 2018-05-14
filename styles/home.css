@@ -1,14 +1,75 @@
-* {
+body {
 	font-family: arial;
-	font-size: 18px;
+	font-size: 16px;
+	color: white;
+}
+input {
+	font-family: arial;
+	font-size: 16px;
 }
 
 #main {
-	width: 350px;
+	width: 450px;
 	padding: 20px;
 	margin: 0 auto 0 auto;
-	border: black solid 1px;
 	text-align: center;
+}
+
+.section {
+	margin-bottom: 50px;
+	padding: 40px;
+	border-radius: 10px;
+}
+
+/* Announcements */
+#announcement {
+	text-align: left;
+	background-color: #DE5B49;
+	box-shadow: 0 5px #BD4D3E;
+}
+#announcement h2 {
+	width: 100%;
+	text-align: center;
+}
+#announcement li {
+	margin-bottom: 5px;
+}
+
+/* Loading bar */
+#loading {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+.spinner {
+	margin: 50px;
+	height: 100px;
+	width: 100px;
+	animation: rotate 0.8s infinite linear;
+	border: 20px solid #fff;
+	border-right-color: transparent;
+	border-radius: 50%;
+	display: inline-block;
+	margin-top: 250px;
+}
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+/* User Information */
+#users {
+	background-color: #46B29D;
+	box-shadow: 0 5px #388F7D;
+}
+
+#selected-user {
+	background-color: #E37B40;
+	box-shadow: 0 5px #C26936;
 }
 
 input#name-filter {
@@ -17,6 +78,7 @@ input#name-filter {
 	padding: 10px;
 	display:inline-block;
 	text-align: left;
+	color: black;
 }
 
 table {
@@ -34,18 +96,28 @@ table#select-user tr:first-of-type td {
 }
 
 table#select-user td {
-	border-bottom: black solid 1px;
-	padding-top: 20px;
 	width: 420px;
-	cursor: pointer;
 }
 
-table#selected-user {
-	margin-top: 100px;
-	width: 350px;
+table#select-user td .username {
+	padding: 10px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	background-color: white;
+	border-radius: 10px;
+	color: #324D5C;
+	box-shadow: 0 5px #DDD;
 }
-table#selected-user td {
-	border-bottom: black solid 1px;
-	padding-top: 20px;
-	width: 200px;
+
+table#selected-user-table {
+	width: 370px;
+}
+table#selected-user-table td {
+	width: 250px;
+}
+table#selected-user-table td .selected-info {
+	padding: 20px;
+	background-color: white;
+	border-radius: 10px;
+	color: #324D5C;
 }
