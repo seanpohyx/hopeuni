@@ -76,6 +76,8 @@ app.controller("announcementCtrl",
 	 		
  		}, 1000)
  		let stop_interval = () => { console.log("stop!"); $interval.cancel(countdown)}
+ 		$scope.next_event_title = first_event['event']
+ 		$scope.next_event_info = first_event['info']
  		$scope.heads = heads
  		$scope.nexts = schedule
  	})
