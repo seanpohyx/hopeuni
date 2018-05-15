@@ -1,4 +1,6 @@
 body {
+	margin: 0;
+	padding: 0;
 	font-family: arial;
 	font-size: 16px;
 	color: white;
@@ -19,6 +21,14 @@ input {
 	margin-bottom: 50px;
 	padding: 40px;
 	border-radius: 10px;
+	background-color: #F0CA4D;
+	box-shadow: 0 5px #CFAE42;
+}
+
+/* Schedule */
+#schedule #countdown h1 {
+	display: inline-block;
+	margin-top: 0px;
 }
 
 /* Announcements */

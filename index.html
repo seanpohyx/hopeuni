@@ -2,11 +2,28 @@
 <html>
 <head>
 	<title>HopeUNI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles/home.css">
 </head>
 <body ng-app="hopeUNIapp" >
 	<div id='main' >
+
+		<div id = 'schedule' ng-controller="scheduleCtrl" class = 'section'>
+			<h2> Schedule </h2>
+			<div id = 'countdown'>
+				<h1>{{hrs}}</h1><h1>:</h1><h1>{{min}}</h1><h1>:</h1><h1>{{secs}}</h1>
+			</div>
+			<div id = 'next-event'>{{ next_event }}</div>
+			<table id = 'upcoming-events'>
+				<tr>
+					<th ng-repeat="head in heads"> {{ head }} </th>
+				</tr>
+				<tr ng-repeat = "next in nexts">
+					<th ng-repeat="(key, value) in next"> {{ value }} </th>
+				</tr>
+			</table>
+		</div>
 
 		<div id = 'announcement' ng-controller="announcementCtrl" class = 'section'>
 			<h2> Announcements </h2>
