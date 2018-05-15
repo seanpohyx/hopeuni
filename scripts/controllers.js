@@ -74,7 +74,7 @@ app.controller("announcementCtrl",
 	 		hour = (secs < 59 || min < 59) ? hour : (hour == 0) ? hour : hour - 1
 
 	 		
- 		}, 100)
+ 		}, 1000)
  		let stop_interval = () => { console.log("stop!"); $interval.cancel(countdown)}
  		$scope.heads = heads
  		$scope.nexts = schedule
