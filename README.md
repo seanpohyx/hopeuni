@@ -13,8 +13,11 @@
 - User's info
 	- Possibly to be extracted from signup forms or smth, current mock in link.
 	- Ranking of name matches to be improved, for now press `h` to see all dummy names I entered
+	- To implement birthday as authentication
 - Announcements
 	- Editable through the sheet (Admin-only)
-- Countdown (To implement)
-- Schedule (To implement)
+- Countdown + schedule
+	- Editable through the sheet (Admin-only)
+	- To fix countdown timer
+- Instagram integration (To implement)
 - Devotions (To implement)
