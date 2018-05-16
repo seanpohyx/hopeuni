@@ -19,5 +19,9 @@
 - Countdown + schedule
 	- Editable through the sheet (Admin-only)
 	- To fix countdown timer
-- Instagram integration (To implement)
+- Feedback/Testimonies/Thanks giving
+	- Redirects to google form to enter their thanksgivings 
+	- Can be viewed directly from the site 
+	- To implement pagination
+- Instagram integration (To implement) (Cancelled)
 - Devotions (To implement)
