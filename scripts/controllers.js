@@ -82,4 +82,17 @@ app.controller("announcementCtrl",
  		$scope.nexts = schedule
  	})
  })
+
+/*
+ * Testimony Controller
+ * load from api and populate front end
+ */
+app.controller("testimonyCtrl", 
+	($scope, $http) => {
+		get_testimony($http, sheet_api)
+		.then((testis) => {
+			testis.shift()
+			$scope.testis = Array.prototype.map.call(testis, (testi) => testi[1])
+		})
+	})
 			

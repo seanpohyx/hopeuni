@@ -131,3 +131,13 @@ function get_schedule($http, api_obj) {
 		return Promise.resolve(processed_data)
 	})
 }
+
+/*
+ * Get testimonies from annoucements sheet
+ */
+function get_testimony($http, api_obj) {
+	return load_sheet($http, api_obj, "testimony")
+	.then((res) => {
+		return Promise.resolve(res.data.values)
+	})
+}
