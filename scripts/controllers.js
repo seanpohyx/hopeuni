@@ -7,6 +7,8 @@ var app = angular.module("hopeUNIapp", [])
 app.controller("userInfoCtrl", 
 	($scope, $http) => {
 
+		alert("sean has successfully fork");
+
 		$scope.filterByQuery = (query) => {
 			return (username) => {
 				return query != null && query != "" && username.toUpperCase().includes(query.toUpperCase())
