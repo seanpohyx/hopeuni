@@ -10,6 +10,11 @@ input {
 	font-size: 16px;
 }
 
+.fontsize-30{font-size:24pt}
+.fontsize-23{font-size:23pt}
+.fontsize-18{font-size:18pt}
+.margintop-100{margin-top:100px;}
+
 #main {
 	width: 450px;
 	padding: 20px;
@@ -131,3 +136,4 @@ table#selected-user-table td .selected-info {
 	border-radius: 10px;
 	color: #324D5C;
 }
+

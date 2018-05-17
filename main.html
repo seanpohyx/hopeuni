@@ -1,0 +1,40 @@
+<div>
+	<div id = 'schedule' ng-controller="scheduleCtrl" class = 'section'>
+		<h2> Schedule </h2>
+		<div id = 'countdown'class="fontsize-30">
+			<h1>{{hrs}}</h1><h1>:</h1><h1>{{min}}</h1><h1>:</h1><h1>{{secs}}</h1>
+		</div>
+		<div id = 'next-event-title' class="fontsize-23">{{ next_event_title }}</div>
+		<div id = 'next-event-info' class="fontsize-18">{{ next_event_info }}</div>
+		<table id = 'upcoming-events' class="margintop-100">
+			<tr>
+				<th ng-repeat="head in heads"> {{ head }} </th>
+			</tr>
+			<tr ng-repeat = "next in nexts">
+				<th ng-repeat="(key, value) in next"> {{ value }} </th>
+			</tr>
+		</table>
+	</div>
+
+	<div id = 'announcement' ng-controller="announcementCtrl" class = 'section'>
+		<h2> Announcements </h2>
+		<ul>
+			<li ng-repeat="anno in annos"> {{ anno }} </li>
+		</ul>
+	</div>
+	<a ng-href="#!/camper">
+		<div id="users" class="section">
+			<p>Click to find out about your informations</p>
+		</div>
+	</a>
+
+	<a ng-href="#!/testimony">
+		<div id = 'testimony' class = 'section'>
+			<p>Click to read encouraging testimonies</p>
+		</div>
+	</a>
+	
+
+		
+
+</div>

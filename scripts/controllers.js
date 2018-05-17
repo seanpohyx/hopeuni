@@ -1,13 +1,29 @@
-var app = angular.module("hopeUNIapp", [])
+var app = angular.module("hopeUNIapp", ['ngRoute'])
 
 /*
  * User info controller
  * load from api and populate front end
  */
+
+ app.config(function($routeProvider) {
+    $routeProvider
+
+        // route for the home page
+        .when('/', {
+            templateUrl: 'main.html'
+        })
+
+        .when('/camper', {
+            templateUrl: 'camperInfo.html'
+        })
+
+        .when('/testimony', {
+            templateUrl: 'testimonies.html'
+        })
+});
+
 app.controller("userInfoCtrl", 
 	($scope, $http) => {
-
-		alert("sean has successfully fork");
 
 		$scope.filterByQuery = (query) => {
 			return (username) => {
@@ -97,4 +113,5 @@ app.controller("testimonyCtrl",
 			$scope.testis = Array.prototype.map.call(testis, (testi) => testi[1])
 		})
 	})
+
 			

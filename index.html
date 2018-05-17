@@ -1,82 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="hopeUNIapp">
+
 <head>
 	<title>HopeUNI</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="styles/home.css">
-</head>
-<body ng-app="hopeUNIapp" >
-	<div id='main' >
-
-		<div id = 'schedule' ng-controller="scheduleCtrl" class = 'section'>
-			<h2> Schedule </h2>
-			<div id = 'countdown'>
-				<h1>{{hrs}}</h1><h1>:</h1><h1>{{min}}</h1><h1>:</h1><h1>{{secs}}</h1>
-			</div>
-			<div id = 'next-event-title'>{{ next_event_title }}</div>
-			<div id = 'next-event-info'>{{ next_event_info }}</div>
-			<table id = 'upcoming-events'>
-				<tr>
-					<th ng-repeat="head in heads"> {{ head }} </th>
-				</tr>
-				<tr ng-repeat = "next in nexts">
-					<th ng-repeat="(key, value) in next"> {{ value }} </th>
-				</tr>
-			</table>
-		</div>
-
-		<div id = 'announcement' ng-controller="announcementCtrl" class = 'section'>
-			<h2> Announcements </h2>
-			<ul>
-				<li ng-repeat="anno in annos"> {{ anno }} </li>
-			</ul>
-		</div>
-
-		<div ng-controller="userInfoCtrl">
-			<div id = 'users'  class = 'section'>
-				<h2> Find my info </h2>
-				<div id = 'loading' ng-hide = "userloaded != null">
-					<div class = "spinner"></div>
-				</div>
-
-				<input id = 'name-filter' type = "text" ng-model = "searchName" placeholder="Enter your name">
-				<table id = "select-user">
-					<tr> <th> {{ heads[0] }} </th> </tr>
-					<tr ng-repeat="username in usernames | filter:filterByQuery(searchName)">
-						<td ng-click="display(username)"><div class = 'username'> {{ username }} </div></td>
-					</tr>
-				</table>
-			</div>
-
-			<div id = 'selected-user' class = 'section' ng-hide = "selecteduser == null">
-				<table id = "selected-user-table">
-					<tr ng-repeat="(key, value) in selecteduser">
-						<td>
-							<div class = 'selected-info'>{{ key }}</div>
-						</td>
-						<td>
-							<div class = 'selected-info'>{{ value }}</div>
-						</td>
-					</tr>
-				</table>
-			</div>	
-		</div>
-
-		<div id = 'testimony' ng-controller="testimonyCtrl" class = 'section'>
-			<h2> Testimonies </h2>
-			<ul>
-				<li ng-repeat="testi in testis"> {{ testi }} </li>
-			</ul>
-			<p><a href = "https://goo.gl/forms/avOjebyPNEMwRlDp1">feedback</a></p>
-			<p><a href = "https://goo.gl/forms/MO52zT4EeRo3trqw1">testimony/thanksgiving</a></p>
-		</div>
-
-	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js""></script>
 
 	<script src="assets/keys/sheet-api.js" type="text/javascript"></script>
 	<script src="scripts/googlesheet.js" type="text/javascript"></script>
 	<script src="scripts/controllers.js" type="text/javascript"></script>
-	
+	<link rel="stylesheet" type="text/css" href="styles/home.css">
+</head>
+<body >
+	<div id='main'>
+		<div ng-view></div>
+	</div>
 </body>
 </html>
